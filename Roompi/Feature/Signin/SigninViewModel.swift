@@ -18,13 +18,14 @@ protocol SigninViewModelInputs {
 }
 
 protocol SigninViewModelOutputs {
-//  var profileInfo: Observable<UserProfile?> { get }
+  var accountInfo: Observable<UserProfile> { get }
 }
 
 final class SigninViewModel: SigninViewModelType {
     let disposableBag = DisposeBag()
     var inputs: SigninViewModelInputs { self }
     var outputs: SigninViewModelOutputs { self }
+    private var accountSubject: PublishSubject<UserProfile> = .init()
 
 }
 
@@ -34,14 +35,15 @@ extension SigninViewModel: SigninViewModelInputs {
       Signin.signInPosts(userName: userName, password: password)
         .observe(on: MainScheduler.instance)
         .subscribe(onNext:{ response in
-          print("List of response:", response.message)
+          print("List of response:", response.result.token)
         })
         .disposed(by: disposableBag)
     }
 }
 
 extension SigninViewModel: SigninViewModelOutputs {
-//  var profileInfo: Observable<UserProfile?> {
-//    <#code#>
-//  }
+  var accountInfo: Observable<UserProfile> {
+    accountSubject.asObservable()
+  }
+
 }

@@ -1,8 +1,12 @@
 PODS:
   - Alamofire (5.4.1)
-  - ObjcExceptionBridging (1.0.1):
-    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
-  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - Material (3.1.8):
+    - Material/Core (= 3.1.8)
+  - Material/Core (3.1.8):
+    - Motion (~> 3.1.1)
+  - Motion (3.1.3):
+    - Motion/Core (= 3.1.3)
+  - Motion/Core (3.1.3)
   - ObjectMapper (4.2.0)
   - RxAlamofire (6.1.1):
     - RxAlamofire/Core (= 6.1.1)
@@ -15,50 +19,50 @@ PODS:
   - RxRelay (6.0.0):
     - RxSwift (= 6.0.0)
   - RxSwift (6.0.0)
+  - SnapKit (5.0.1)
   - SwiftMessages (9.0.0):
     - SwiftMessages/App (= 9.0.0)
   - SwiftMessages/App (9.0.0)
   - SwiftyJSON (5.0.0)
-  - XCGLogger (7.0.1):
-    - XCGLogger/Core (= 7.0.1)
-  - XCGLogger/Core (7.0.1):
-    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Material
   - ObjectMapper
   - RxAlamofire
   - RxCocoa (= 6.0.0)
   - RxSwift (= 6.0.0)
+  - SnapKit
   - SwiftMessages
   - SwiftyJSON
-  - XCGLogger
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - ObjcExceptionBridging
+    - Material
+    - Motion
     - ObjectMapper
     - RxAlamofire
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SnapKit
     - SwiftMessages
     - SwiftyJSON
-    - XCGLogger
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftMessages: 55274ca3a239062398603008ed81924cfd1fe798
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 68b031bdd7c5784a0b58835e24e6a55626f94240
+PODFILE CHECKSUM: 851cb7f72a6b900bbc10453e6872794b04254583
 
 COCOAPODS: 1.10.1

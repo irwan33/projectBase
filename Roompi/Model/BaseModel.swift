@@ -9,5 +9,5 @@ import Foundation
 
 struct BaseModel: Codable {
     let message: String
-    let result: String
+    let result: UserProfile
 }

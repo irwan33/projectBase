@@ -7,15 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
-    private let viewModel: SigninViewModelType = SigninViewModel()
+  @IBOutlet weak var scrollView: UIScrollView!
+  private let viewModel: SigninViewModelType = SigninViewModel()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewModel.inputs.signRequest(userName: "Iyon", password: "test321")
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    registerKeyboardNotifications()
+    viewModel.inputs.signRequest(userName: "Iyon", password: "test321")
+  }
 
 
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    NotificationCenter.default.removeObserver(self)
+  }
+
+  
 }
 
