@@ -38,8 +38,8 @@
 		A2AB80CB25D3D7C100E69DFA /* HasSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB80CA25D3D7C100E69DFA /* HasSetup.swift */; };
 		A2AB80D025D3D89700E69DFA /* UIView+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB80CF25D3D89700E69DFA /* UIView+Swizzle.swift */; };
 		A2D75E2425C92CB300FDD124 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D75E2325C92CB300FDD124 /* SigninViewModel.swift */; };
-		A2FF501D25CA5E9A004BD8DE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FF501C25CA5E9A004BD8DE /* BaseModel.swift */; };
-		A2FF502525CA5F2E004BD8DE /* SigninModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FF502425CA5F2E004BD8DE /* SigninModel.swift */; };
+		A2FF501D25CA5E9A004BD8DE /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FF501C25CA5E9A004BD8DE /* signInModel.swift */; };
+		A2FF502525CA5F2E004BD8DE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FF502425CA5F2E004BD8DE /* UserProfile.swift */; };
 		B172BE616FA37F99FA9F368C /* Pods_Roompi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E5EED46884F63B56FA1D83 /* Pods_Roompi.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,8 +102,8 @@
 		A2AB80CA25D3D7C100E69DFA /* HasSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSetup.swift; sourceTree = "<group>"; };
 		A2AB80CF25D3D89700E69DFA /* UIView+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzle.swift"; sourceTree = "<group>"; };
 		A2D75E2325C92CB300FDD124 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
-		A2FF501C25CA5E9A004BD8DE /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		A2FF502425CA5F2E004BD8DE /* SigninModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninModel.swift; sourceTree = "<group>"; };
+		A2FF501C25CA5E9A004BD8DE /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
+		A2FF502425CA5F2E004BD8DE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		A6240966876DF38DCABEC439 /* Pods-RoompiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoompiTests.debug.xcconfig"; path = "Target Support Files/Pods-RoompiTests/Pods-RoompiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6FC50FC8D81B8E301CB38E /* Pods-Roompi-RoompiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roompi-RoompiUITests.release.xcconfig"; path = "Target Support Files/Pods-Roompi-RoompiUITests/Pods-Roompi-RoompiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E460F75AD65BA31263999C21 /* Pods-RoompiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoompiTests.release.xcconfig"; path = "Target Support Files/Pods-RoompiTests/Pods-RoompiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -335,8 +335,8 @@
 		A2FF501B25CA5E7F004BD8DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A2FF501C25CA5E9A004BD8DE /* BaseModel.swift */,
-				A2FF502425CA5F2E004BD8DE /* SigninModel.swift */,
+				A2FF501C25CA5E9A004BD8DE /* signInModel.swift */,
+				A2FF502425CA5F2E004BD8DE /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -593,7 +593,7 @@
 				A2A0003025C7FDFA00110208 /* DateGeneric.swift in Sources */,
 				A2AB803925D38D5900E69DFA /* BaseTextField.swift in Sources */,
 				A2708E8825DE6545002EC754 /* BaseViewController.swift in Sources */,
-				A2FF502525CA5F2E004BD8DE /* SigninModel.swift in Sources */,
+				A2FF502525CA5F2E004BD8DE /* UserProfile.swift in Sources */,
 				A22FAA5F25C7D77800B7660D /* SceneDelegate.swift in Sources */,
 				A2AB80B525D3CBC100E69DFA /* String+Extention.swift in Sources */,
 				A2708E8025DE650E002EC754 /* KeyboardEventDispatcher.swift in Sources */,
@@ -601,7 +601,7 @@
 				A24001FD25CBCF1900BC114F /* ToastManager.swift in Sources */,
 				A2A0001F25C7FD5B00110208 /* APICallError.swift in Sources */,
 				A2AB80D025D3D89700E69DFA /* UIView+Swizzle.swift in Sources */,
-				A2FF501D25CA5E9A004BD8DE /* BaseModel.swift in Sources */,
+				A2FF501D25CA5E9A004BD8DE /* signInModel.swift in Sources */,
 				A2A0002F25C7FDFA00110208 /* Fonts.swift in Sources */,
 				A2A0000625C7E63D00110208 /* ApiClient.swift in Sources */,
 				A2A0002C25C7FDFA00110208 /* Constants.swift in Sources */,

@@ -315,6 +315,9 @@
                     </view>
                     <size key="freeformSize" width="375" height="750"/>
                     <connections>
+                        <outlet property="LoginButton" destination="drk-t9-fTJ" id="Vy0-3r-KkL"/>
+                        <outlet property="LogoImage" destination="IVx-xO-bih" id="SP5-yx-8GG"/>
+                        <outlet property="imageBackground" destination="vgU-AW-dLj" id="Dsi-bW-fG5"/>
                         <outlet property="scrollView" destination="Cgy-Z6-Vwz" id="EgG-wR-38I"/>
                     </connections>
                 </viewController>

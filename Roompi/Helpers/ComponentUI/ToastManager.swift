@@ -22,8 +22,8 @@ extension Theme {
 }
 extension NSObject {
 
-    func makeToast(text : String?,type : Theme,time : Double = 0.5){
-        let view = MessageView.viewFromNib(layout: .messageView)
+    func makeToast(text : String?,type : Theme,time : Double = 1.5){
+        let view = MessageView.viewFromNib(layout: .cardView)
 
         // Theme message elements with the warning style.
         view.configureTheme(type)
@@ -38,7 +38,7 @@ extension NSObject {
         view.configureContent(title: type.title, body: text, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "OK") { (button) in
             SwiftMessages.hide()
         }
-        SwiftMessages.defaultConfig.presentationStyle = .top
+      SwiftMessages.defaultConfig.presentationStyle = .bottom
 
         SwiftMessages.defaultConfig.presentationContext = .window(windowLevel: UIWindow.Level.normal)
 

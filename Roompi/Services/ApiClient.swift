@@ -2,6 +2,7 @@ import Foundation
 import Alamofire
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 class ApiClient {
     //-------------------------------------------------------------------------------------------------------------------------
@@ -15,9 +16,9 @@ class ApiClient {
                     URL\t\t\t\t: \(urlConvertible)
                     BODY\t\t\t: \(String(describing: parameters))
                     """)
+
                 switch response.result {
                 case .success(let value):
-//                  print("Response String:",value)
                   print("""
                   \n\t[🎁 RESPONSE 🎁]
                       RESULT\t\t\t: \(value)
@@ -34,6 +35,19 @@ class ApiClient {
                         observer.onError(ApiError.conflict)
                     case 500:
                         observer.onError(ApiError.internalServerError)
+                    case 400:
+                      observer.onError(ApiError.badRequest)
+                      if let data = response.data,
+                          let _ = String(data: data, encoding: .utf8) {
+                          do{
+                              let json = try JSON(data: data)
+                                  print(json)
+                              let message = json["message"].string
+                              UIApplication.shared.keyWindow?.rootViewController?.makeToast(text: message, type: .error)
+                          } catch {
+                              print("Unexpected error: \(error).")
+                          }
+                      }
                     default:
                         observer.onError(error)
                     }

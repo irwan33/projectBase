@@ -1,9 +1,8 @@
 //
 //  Fonts.swift
-//  Zodiluv
+//  Roompi
 //
-//  Created by Anshul Shah on 1/16/18.
-//  Copyright © 2018 Anshul Shah. All rights reserved.
+//  Created by irwan on 03/02/21.
 //
 
 import UIKit

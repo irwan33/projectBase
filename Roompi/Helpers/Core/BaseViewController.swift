@@ -7,15 +7,17 @@
 
 import UIKit
 import Foundation
+import RxSwift
 
 class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
+  let disposeBag = DisposeBag()
 
 
 }
 
 // keyboardWillShow and keyboardWillHide
 extension BaseViewController {
-  func registerKeyboardNotifications() {
+  func keyboardNotifications() {
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
   }
